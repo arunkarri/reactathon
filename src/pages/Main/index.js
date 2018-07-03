@@ -23,7 +23,6 @@ import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
 
-
 const Main = ({
   mobileNavVisibility,
   hideMobileMenu,
