@@ -56,7 +56,7 @@ const Main = ({
           <Route path="/charts" component={Charts} />
           <Route path="/calendar" component={Calendar} />  */}
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </div>

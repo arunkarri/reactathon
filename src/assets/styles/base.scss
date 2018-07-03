@@ -30,8 +30,46 @@ html, body {
   margin-right: 9px;
   /* height: 3%; */
 }
+.sidebar .sidebar-wrapper {
+  background-color: #383846;
+  height: calc(100vh - 64px);
+  overflow: auto;
+}
+body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Verdana;
+    font-weight: 700;
+}
+.main-panel {
+  background-color: #232923;
+}
 .sidebar .brand {
   height: 100px;
+}
+.card .header h1, .card .header h2, .card .header h3, .card .header h4, .card .header h5, .card .header h6 {
+  color:black;
+}
+.card .title {
+  color: black;
+}
+.card .form-group label.control-label, .card fieldset label.control-label {
+  color: black;
+  text-transform: uppercase;
+}
+.card .form-group label, .card fieldset label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.navbar .navbar-nav > li > a {
+  padding: 28px 25px;
+  color: black;
+  
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
 }
 
 .places-buttons .btn {

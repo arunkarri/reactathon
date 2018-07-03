@@ -17,7 +17,26 @@ class CreateHackathon extends Component {
           };
     }
 
+    state = {
+        response: ''
+      };
     
+      componentDidMount() {
+        this.callApi()
+          .then(res => this.setState({ response: res.express }))
+          .catch(err => console.log(err));
+      }
+    
+    callApi = async (input) => {
+        fetch('https://mywebsite.com/endpoint/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(input)
+        })
+      };
 
     
 
@@ -28,23 +47,23 @@ class CreateHackathon extends Component {
             newHack:{
                 name: this.refs.hackName.value,
                 teamSize: this.refs.teamsize.value,
+                sDate: this.state.startDate.format("MM/DD/YYYY"),
+                eDate: this.state.endDate.format("MM/DD/YYYY"),
                 tech: this.refs.stack.value,
                 admin:  this.refs.admins.value
             }
-        },() => {console.log('current styate',this.state)});
+        },() => {
+            this.callApi(this.state.newHack);
+            console.log('current styate',this.state.newHack)
+        });
 
-
-
-        console.log(this.refs.hackName.value);
-        console.log(this.state.newHack);
-        console.log(this.state.endDate._d);
         e.preventDefault();
     }
 
     render() {
          let { date } = this.state;
         return (
-            <div className="row">
+            <div className="">
                 <div className="col-md-6">
                     <div className="card">
                         <div className="content">
@@ -59,7 +78,7 @@ class CreateHackathon extends Component {
 
                                 <div className="form-group">
                                     <label className="control-label">Event Date Range</label>
-                                    <DateRangePicker
+                                    <DateRangePicker ref="datepick"
                                         startDate={this.state.startDate}
                                         endDate={this.state.endDate}
                                         focusedInput={this.state.dateRangeFocusedInput}
