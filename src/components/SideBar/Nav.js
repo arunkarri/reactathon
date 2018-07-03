@@ -17,10 +17,10 @@ class Nav extends Component {
             <p>Dashboard</p>
           </Link>
         </li>
-        <li className={this.isPathActive('/add') ? 'active' : null}>
-          <Link to="/add">
+        <li className={this.isPathActive('/create') ? 'active' : null}>
+          <Link to="/create">
             <i className="pe-7s-add-user"></i>
-            <p>Add New Event</p>
+            <p>Create New Hackathon</p>
           </Link>
         </li>
         <li className={this.isPathActive('/register') ? 'active' : null}>

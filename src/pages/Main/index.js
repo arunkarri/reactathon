@@ -23,6 +23,7 @@ import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
 import Register from '../Components/Register/Register';
+import CreateHackathon from '../Components/CreateHackathon/createHack';
 
 const Main = ({
   mobileNavVisibility,
@@ -47,6 +48,7 @@ const Main = ({
            <Route exact path="/" component={Dashboard} />
            <Route exact path="/register" component={Register} />
           <Route path="/events" component={Events} />
+          <Route path="/create" component={CreateHackathon} />
           {/* <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
           <Route path="/tables" component={Tables} />
