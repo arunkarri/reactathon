@@ -17,6 +17,24 @@ class Nav extends Component {
             <p>Dashboard</p>
           </Link>
         </li>
+        <li className={this.isPathActive('/add') ? 'active' : null}>
+          <Link to="/add">
+            <i className="pe-7s-add-user"></i>
+            <p>Add New Event</p>
+          </Link>
+        </li>
+        <li className={this.isPathActive('/register') ? 'active' : null}>
+          <Link to="/register">
+            <i className="pe-7s-graph"></i>
+            <p>Register for an Event</p>
+          </Link>
+        </li>
+        <li className={this.isPathActive('/events') ? 'active' : null}>
+          <Link to="/events">
+            <i className="pe-7s-graph"></i>
+            <p>View Events</p>
+          </Link>
+        </li>
         {/* <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}
             data-toggle="collapse">

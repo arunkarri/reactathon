@@ -22,6 +22,7 @@ import Forms from '../Forms';
 import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
+import Register from '../Components/Register/Register';
 
 const Main = ({
   mobileNavVisibility,
@@ -43,15 +44,15 @@ const Main = ({
 
         <div className="main-panel">
           <Header />
-          <Events/>
-          {/* <Route exact path="/" component={Dashboard} />
-          <Route path="/components" component={Components} />
-          <Route path="/profile" component={UserProfile} />
+           <Route exact path="/" component={Dashboard} />
+           <Route exact path="/register" component={Register} />
+          <Route path="/events" component={Events} />
+          {/* <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
           <Route path="/tables" component={Tables} />
           <Route path="/maps" component={MapsPage} />
           <Route path="/charts" component={Charts} />
-          <Route path="/calendar" component={Calendar} /> */}
+          <Route path="/calendar" component={Calendar} />  */}
 
           <Footer />
         </div>
