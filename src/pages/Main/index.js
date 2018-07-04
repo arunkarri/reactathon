@@ -8,6 +8,7 @@ import { withRouter } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Events from './EventsView';
+import EventDesc from './EventDesc';
 import SideBar from '../../components/SideBar';
 import ThemeOptions from '../../components/ThemeOptions';
 import MobileMenu from '../../components/MobileMenu';
@@ -47,7 +48,10 @@ const Main = ({
           <Header />
            <Route exact path="/" component={Dashboard} />
            <Route exact path="/register" component={Register} />
-          <Route path="/events" component={Events} />
+          <Switch>
+          <Route exact path="/events" component={Events} />
+          <Route path='/events/:name' component={EventDesc}/>
+          </Switch>
           <Route path="/create" component={CreateHackathon} />
           {/* <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
