@@ -57,7 +57,7 @@ showPopup(){
 render() {
    
     return (
-        <div className="col-md-8">
+        <div className="">
           <div className="card">
             {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}
             <div className="header">
