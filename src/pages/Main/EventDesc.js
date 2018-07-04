@@ -92,7 +92,9 @@ class EventDesc extends Component {
 
               </tbody>
             </table>
+            <button type="button" className="btn btn-info btn-fill pull-right"><Link to={`/events`}>Back</Link></button>
           </div>
+          
         </div>
       </div>
     );

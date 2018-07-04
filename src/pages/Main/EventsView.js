@@ -99,7 +99,7 @@ class Events extends Component {
       // </div>
       <div>
       {this.state.events.map(function (event, index) {
-       return  <div className="col-md-4">
+       return  <div className="col-md-4" key={index}>
           <div className="card">
             {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}
             <div className="header">

@@ -3,7 +3,7 @@ import styles from '../Main/events.css';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import renderField from 'components/FormInputs/renderField';
-import Modal, {closeStyle} from 'simple-react-modal'
+
 // import Background from '../../assets/images/events.jpg';
 
 class ViewSolutionComponent extends Component {

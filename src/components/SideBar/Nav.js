@@ -11,12 +11,7 @@ class Nav extends Component {
     let { location } = this.props;
     return (
       <ul className="nav">
-        <li className={location.pathname === '/' ? 'active' : null}>
-          <Link to="/">
-            <i className="pe-7s-graph"></i>
-            <p>Dashboard</p>
-          </Link>
-        </li>
+        
         <li className={this.isPathActive('/create') ? 'active' : null}>
           <Link to="/create">
             <i className="pe-7s-add-user"></i>

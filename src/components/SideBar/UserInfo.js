@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Collapse } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import cx from 'classnames';
+import FaTrophy from 'react-icons/lib/fa/trophy';
 
 class UserInfo extends Component {
 
@@ -16,10 +17,10 @@ class UserInfo extends Component {
     return (
       <div className="user-wrapper">
         <div className="user">
-          <img src={require('../../assets/images/user.png')} alt={user.name} className="photo" />
+          <img src={require('../../assets/images/user.png')} alt={user.name} className="photo" /><FaTrophy size={30} color={'gold'} />
           <div className="userinfo">
             <div className="username">
-              {user.name}
+              Cyber Ark
             </div>
             <div className="title">Admin</div>
           </div>

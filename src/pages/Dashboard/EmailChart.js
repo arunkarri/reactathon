@@ -17,7 +17,7 @@ const EmailStatistic = () => {
 
   let optionsPreferences = {
     donut: false,
-    donutWidth: 40,
+    donutWidth: 20,
     startAngle: 0,
     total: 100,
     showLabel: true,

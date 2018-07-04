@@ -7,9 +7,6 @@ import { withRouter } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
-import ViewSolutionComponent from './viewSolution';
-import UploadSolutionComponent from './uploadSolution';
-import UploadSuccessComponent from './uploadsuccess';
 import Events from './EventsView';
 import EventDesc from './EventDesc';
 import SideBar from '../../components/SideBar';
@@ -28,7 +25,14 @@ import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
 import Register from '../Components/Register/Register';
+import MyRegistry from '../Components/Register/MyRegistry';
 import CreateHackathon from '../Components/CreateHackathon/createHack';
+import Chart from '../LeaderBoard/chart';
+import MainChart from '../LeaderBoard/mainchart';
+
+import ViewSolutionComponent from './viewSolution';
+import UploadSolutionComponent from './uploadSolution';
+import UploadSuccessComponent from './uploadsuccess'
 
 const Main = ({
   mobileNavVisibility,
@@ -50,13 +54,18 @@ const Main = ({
 
         <div className="main-panel">
           <Header />
+          <div className="col-md-9">
            <Route exact path="/" component={Dashboard} />
-           <Route exact path="/register" component={Register} />
+           <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/register/5b3b5c69ca4aa9c842eec017" component={MyRegistry} />
+           </Switch>
           <Switch>
           <Route exact path="/events" component={Events} />
           <Route path='/events/:name' component={EventDesc}/>
           </Switch>
-          <Route path="/create" component={CreateHackathon} />
+          <Route path="/create" component={CreateHackathon}/>
+          <Route path="/chart" component={MainChart} />
           <Route path="/viewSolution" component={ViewSolutionComponent} />
           <Route path="/uploadSolution" component={UploadSolutionComponent} />
           <Route path="/uploadSuccess" component={UploadSuccessComponent} />
@@ -66,7 +75,10 @@ const Main = ({
           <Route path="/maps" component={MapsPage} />
           <Route path="/charts" component={Charts} />
           <Route path="/calendar" component={Calendar} />  */}
-
+          </div>
+          <div className="col-md-3">
+            <MainChart/>
+          </div>
           {/* <Footer /> */}
         </div>
       </div>
