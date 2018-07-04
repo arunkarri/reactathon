@@ -41,8 +41,21 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, 
   font-family: Verdana;
     font-weight: 700;
 }
+.navbar {
+   margin-bottom: 0px;
+}
+a {
+  color: #337ab7;
+}
 .main-panel {
-  background-color: #232923;
+  background-color: white;
+}
+.card {
+  border: 1px solid #c1bebe;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  background: white;
+  color: black;
 }
 .sidebar .brand {
   height: 100px;
