@@ -102,7 +102,7 @@ class MyRegistry extends Component {
        <h3> Thank you for enrolling !</h3> 
       {this.state.events.map(function (event, index) {
       
-       return  <div className="col-md-4">
+       return  <div className="col-md-4" key={index}>
       
           <div className="card">
             {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}

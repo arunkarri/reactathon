@@ -107,7 +107,7 @@ class Events extends Component {
               <p className="category"><b>Starts on:</b> {event.start_date}</p>
               <p className="category"><b>Technology Stack expected:</b> {event.tech}</p>
             
-            <button type="button" className="btn btn-info btn-fill">Register</button>
+            <button type="button" className="btn btn-info btn-fill"><Link to={`/register`}>Register</Link></button>
             </div>
           </div>
         </div>
