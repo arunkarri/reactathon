@@ -129,7 +129,7 @@ import {Link} from 'react-router-dom';
                             <label className="control-label"> Captain Email: </label>
                             <Field type="text" name="emailAddress" ref="emailAddress" component={renderField} />
                         </div> 
-                        <button type="submit" className="btn btn-fill btn-info" ><Link to={`/`}>Submit</Link></button>
+                        <button type="submit" className="btn btn-fill btn-info" ><Link to={`/register/5b3b5c69ca4aa9c842eec017`}>Submit</Link></button>
                     </form>
                 </div>
             </div>
