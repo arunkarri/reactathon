@@ -7,6 +7,9 @@ import { withRouter } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+import ViewSolutionComponent from './viewSolution';
+import UploadSolutionComponent from './uploadSolution';
+import UploadSuccessComponent from './uploadsuccess';
 import Events from './EventsView';
 import EventDesc from './EventDesc';
 import SideBar from '../../components/SideBar';
@@ -54,6 +57,9 @@ const Main = ({
           <Route path='/events/:name' component={EventDesc}/>
           </Switch>
           <Route path="/create" component={CreateHackathon} />
+          <Route path="/viewSolution" component={ViewSolutionComponent} />
+          <Route path="/uploadSolution" component={UploadSolutionComponent} />
+          <Route path="/uploadSuccess" component={UploadSuccessComponent} />
           {/* <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
           <Route path="/tables" component={Tables} />

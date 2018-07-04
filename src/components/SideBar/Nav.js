@@ -35,6 +35,18 @@ class Nav extends Component {
             <p>View Events</p>
           </Link>
         </li>
+        <li className={this.isPathActive('/uploadSolution') ? 'active' : null}>
+          <Link to="/uploadSolution">
+            <i className="pe-7s-graph"></i>
+            <p>Upload Solutions</p>
+          </Link>
+        </li>
+        <li className={this.isPathActive('/viewSolution') ? 'active' : null}>
+          <Link to="/viewSolution">
+            <i className="pe-7s-graph"></i>
+            <p> View Solutions</p>
+          </Link>
+        </li>
         {/* <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}
             data-toggle="collapse">
