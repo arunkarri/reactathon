@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../Main/events.css';
+import {Link} from 'react-router-dom';
 // import Background from '../../assets/images/events.jpg';
 
 class Events extends Component {
