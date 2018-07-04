@@ -99,7 +99,7 @@ class MyRegistry extends Component {
       //   </div>
       // </div>
       <div>
-        
+       <h3> Thank you for enrolling !</h3> 
       {this.state.events.map(function (event, index) {
       
        return  <div className="col-md-4">
