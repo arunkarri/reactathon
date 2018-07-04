@@ -48,7 +48,7 @@ class Events extends Component {
           {this.state.events.map(function(event,index){
               
                return <tr key={index}>
-               <td>{event.name}</td></tr>
+               <td>{event.name}<Link to={`/events/${event.name}`}>{event.name}</Link></td></tr>
            })}
            
           </tbody>
