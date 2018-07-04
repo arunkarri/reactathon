@@ -22,40 +22,50 @@ class CreateHackathon extends Component {
       };
     
       componentDidMount() {
-        // this.callApi()
-        //   .then(res => this.setState({ response: res.express }))
-        //   .catch(err => console.log(err));
+        
       }
+
+      callApi = async () => {
+        
+        const response = await fetch('http://10.74.17.159:4500/cyberarknode/hacks',{method:'POST',headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(this.state.newHack)
+    });
+        const body = await response.json();
     
-    callApi = async (input) => {
-        fetch('https://mywebsite.com/endpoint/', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(input)
-        })
+        if (response.status !== 200) throw Error(body.message);
+    
+        return body;
       };
+    
+   
 
     
 
     handleSubmit(e) {
        
-        () => this.APICallFunction()
+       
         this.setState({
             newHack:{
-                name: this.refs.hackName.value,
-                teamSize: this.refs.teamsize.value,
-                sDate: this.state.startDate.format("MM/DD/YYYY"),
-                eDate: this.state.endDate.format("MM/DD/YYYY"),
+                hack_id :"3", 
+                NAME: this.refs.hackName.value,
+                description:this.refs.hackDesc.value,
+                participants: this.refs.teamsize.value,
+                start_date: this.state.startDate.format("MM/DD/YYYY"),
+                end_date: this.state.endDate.format("MM/DD/YYYY"),
                 tech: this.refs.stack.value,
-                admin:  this.refs.admins.value
+                criteria:this.refs.criteria.value.indexOf(',') !== -1 ? this.refs.criteria.value.split(',') :[this.refs.criteria.value],
+                admin_id:  this.refs.admins.value
             }
         },() => {
-            this.callApi(this.state.newHack);
-            console.log('current styate',this.state.newHack)
+            //this.callApi(this.state.newHack);
+            console.log('current styate',this.state.newHack);
+            this.callApi().then(res => console.log('success response is',res))
+            .catch(err => console.log(err));
         });
+       
 
         e.preventDefault();
     }
@@ -73,6 +83,14 @@ class CreateHackathon extends Component {
                                     <Field 
                                         name="hackName"
                                         type="text" ref="hackName"
+                                        component={renderField} />
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label">Hackathon Description</label>
+                                    <Field 
+                                        name="hackDesc"
+                                        type="text" ref="hackDesc"
                                         component={renderField} />
                                 </div>
 
@@ -103,6 +121,14 @@ class CreateHackathon extends Component {
                                     <Field
                                         name="stack"
                                         type="text" ref="stack"
+                                        component={renderField} />
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label">Criteria</label>
+                                    <Field
+                                        name="criteria"
+                                        type="text" ref="criteria"
                                         component={renderField} />
                                 </div>
 

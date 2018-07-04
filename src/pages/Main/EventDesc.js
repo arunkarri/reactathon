@@ -6,7 +6,7 @@ import { Link, Switch } from 'react-router-dom'
 class EventDesc extends Component {
   constructor() {
     super();
-    this.state = { events: [],event:'' };
+    this.state = { events: [],event:{} };
   }
   componentDidMount() {
     // var List = [{name:"Hackathkghghjgon1",org :"Wireless"},{name:"Hackathon2",org :"Wireless4"},{name:"Hackathon3",org :"Wireline"}]
@@ -80,13 +80,13 @@ class EventDesc extends Component {
                   <td>{this.state.event.description}</td>
                   <td>{this.state.event.org}</td>
                   <td>{this.state.event.tech}</td>
-                  {/* <td>
+                  <td>
                     <ul>
-                      {this.state.event.criteria.map(function (crt, index) {
+                      {this.state.event.criteria ? this.state.event.criteria.map(function (crt, index) {
                         return <li key={index}>{crt}</li>
-                      })}
+                      }) :null}
                     </ul>
-                  </td> */}
+                  </td>
                 </tr>
 
 
