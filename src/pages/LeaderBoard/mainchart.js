@@ -17,9 +17,12 @@ componentDidMount() {
 };
 render(){
     return (
+       
         <div>
+        
         <div className="card mychart" >
         <div className="header">
+        
         <h4 className="title">Leader Board &nbsp;&nbsp;<FaTrophy size={30} color={'gold'} /></h4>
               <h6 className="title">Report by Submission</h6>
                 <Chart/>

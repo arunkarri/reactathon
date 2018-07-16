@@ -32,7 +32,8 @@ import MainChart from '../LeaderBoard/mainchart';
 
 import ViewSolutionComponent from './viewSolution';
 import UploadSolutionComponent from './uploadSolution';
-import UploadSuccessComponent from './uploadsuccess'
+import UploadSuccessComponent from './uploadsuccess';
+import scrollNews from './scrollNews';
 
 const Main = ({
   mobileNavVisibility,

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toggleMobileNavVisibility } from '../../reducers/Layout';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl } from 'react-bootstrap';
+import ScrollNews from './scrollNews';
+import '../Main/events.css';
 
 const Header = ({
   showMobileMenu,
@@ -18,8 +20,10 @@ const Header = ({
       </Navbar.Header>
 
       <Navbar.Collapse>
-
-        <Nav>
+        <div className="margin pull-right">
+          <ScrollNews />
+        </div>
+        {/* <Nav>
           <NavItem><i className="fa fa-dashboard"></i></NavItem>
           <NavDropdown title={<i className="fa fa-globe" />} id="basic-nav-dropdown">
             <MenuItem>Action</MenuItem>
@@ -46,7 +50,7 @@ const Header = ({
             <MenuItem>Separated link</MenuItem>
           </NavDropdown>
           <NavItem>Log out</NavItem>
-        </Nav>
+        </Nav> */}
       </Navbar.Collapse>
     </Navbar>
   );

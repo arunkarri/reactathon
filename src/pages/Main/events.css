@@ -1,3 +1,70 @@
 .bg{
     background-image: url('../../assets/images/events.jpg')
 }
+.margin{
+    margin-bottom: 10px;
+}
+#tickr-box {
+    background: #bbbbbb;
+    max-width: 100%;
+}
+.tickr-title {
+    color: #FFFFFF;
+    font: bold 18px arial, sans-serif;
+    background: #990000;
+    padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#tickr-scroll {
+    background: #FFFFFF;
+    height: 76px;
+    margin: 3px auto 0 auto;
+    overflow: hidden;
+    padding: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#tickr-scroll li {
+    color: #000000;
+    font: normal 13px arial, sans-serif;
+    line-height: 26px;
+}
+
+.holder .title{
+    color: #cd040b;
+}
+.holder { 
+    background-color:#e2e2e2;
+    width:300px;
+    height:250px;
+    border-radius: 24px;
+    overflow:hidden;
+    padding:10px;
+    font-family:Helvetica;
+  }
+  .holder .mask {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 5px;
+    width:300px;
+    height:240px;
+    overflow: hidden;
+  }
+  .holder ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+  }
+  .holder ul li {
+    padding:10px 0px;
+  }
+  .holder ul li a {
+    color:blue;
+    text-decoration:none;
+  }
