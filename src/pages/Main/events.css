@@ -4,6 +4,21 @@
 .margin{
     margin-bottom: 10px;
 }
+.ongoing{
+    border-left-color: blue;
+    border-left-style: solid;
+    border-left-width: 12px;
+}
+.upcoming{
+    border-left-color: green;
+    border-left-style: solid;
+    border-left-width: 12px;
+}
+.done{
+    border-left-color: red;
+    border-left-style: solid;
+    border-left-width: 12px;
+}
 #tickr-box {
     background: #bbbbbb;
     max-width: 100%;

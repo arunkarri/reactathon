@@ -42,27 +42,27 @@ class ScrollNews extends Component {
                         
                         newsList={[
                             {
-                                text: "Reactathon Demos 16/07/2018",
+                                text: "Reactathon Demos @ 16/07/2018",
                                 link: "#"
                             },
                             {
-                                text: "BlockChain Hackathon 29/07/2018",
+                                text: "BlockChain Hackathon @ 29/07/2018",
                                 link: "#"
                             },
                             {
-                                text: "Mean Stack Hackathon 03/08/2018",
+                                text: "Mean Stack Hackathon @ 03/08/2018",
                                 link: "#"
                             },
                             {
-                                text: "AWS Hackathon 10/08/2018",
+                                text: "AWS Hackathon @ 10/08/2018",
                                 link: "#"
                             },
                             {
-                                text: "Ionic Hackathon 17/08/2018",
+                                text: "Ionic Hackathon @ 17/08/2018",
                                 link: "#"
                             },
                             {
-                                text: "Android Hackathon 24/08/2018",
+                                text: "Android Hackathon @ 24/08/2018",
                                 link: "#"
                             }
                         ]}

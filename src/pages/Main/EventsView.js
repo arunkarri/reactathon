@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import styles from '../Main/events.css';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 // import Background from '../../assets/images/events.jpg';
 
 class Events extends Component {
   constructor() {
     super();
-    this.state = { events: [] };
+    this.state = { events: [], newDay:''};
+    
     this.filterList = this.filterList.bind(this);
   }
   componentDidMount() {
     // var List = [{name:"Hackathkghghjgon1",org :"Wireless"},{name:"Hackathon2",org :"Wireless4"},{name:"Hackathon3",org :"Wireline"}]
-    
-    
+   
 
     this.callApi()
     .then(res => 
       {
-        
+         
       console.log(res); 
       this.setState({ events: res })
       })      
     .catch(err => console.log(err));
-  console.log(this.state.events)
 };
 
 
@@ -99,8 +99,10 @@ class Events extends Component {
       // </div>
       <div>
       {this.state.events.map(function (event, index) {
+        var today= moment().format("MM/DD/YYYY");
        return  <div className="col-md-4" key={index}>
-          <div className="card">
+       {event.end_date >= today && event.start_date <= today &&
+        <div className="card ongoing" >
             {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}
             <div className="header">
               <h4 className="title"><a><Link to={`/events/${event.NAME}`}>{event.NAME}</Link></a></h4>
@@ -110,6 +112,34 @@ class Events extends Component {
             <button type="button" className="btn btn-info btn-fill"><Link to={`/register`}>Register</Link></button>
             </div>
           </div>
+        }
+
+        {event.end_date < today &&
+        <div className="card done" >
+            {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}
+            <div className="header">
+              <h4 className="title"><a><Link to={`/events/${event.NAME}`}>{event.NAME}</Link></a></h4>
+              <p className="category"><b>Starts on:</b> {event.start_date}</p>
+              <p className="category"><b>Technology Stack expected:</b> {event.tech}</p>
+            
+            <button type="button" className="btn btn-info btn-fill"><Link to={`/register`}>Register</Link></button>
+            </div>
+          </div>
+        }
+
+        {event.start_date > today &&
+        <div className="card upcoming" >
+            {/* <div style={{backgroundImage: "url(" + Background + ")"}}> */}
+            <div className="header">
+              <h4 className="title"><a><Link to={`/events/${event.NAME}`}>{event.NAME}</Link></a></h4>
+              <p className="category"><b>Starts on:</b> {event.start_date}</p>
+              <p className="category"><b>Technology Stack expected:</b> {event.tech}</p>
+            
+            <button type="button" className="btn btn-info btn-fill"><Link to={`/register`}>Register</Link></button>
+            </div>
+          </div>
+        }
+          
         </div>
 
         })}
